@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="C:\Users\Mr. Yeager\Documents\Aulas de HTML\Projetos\DaysOfCode_day3.html"></a>
+    <title>7DaysOfCode</title>
+</head>
+<body>
+    <script src="DaysOfCode_day2.js"></script>
+
+<header>
+    <img src="https://i.imgur.com/BMPXs60.png" /><br>
+    <h1>Responda o questionário para cadastro</h1>
+</header>
+
+<div class="perguntas">
+    <label>Qual o seu nome?</label><br>
+    <input id="nome" class="nome" type="text" placeholder="Nome, ou pseudonimo"><br><br>
+    
+    <label>Quantos anos voce tem?</label><br>
+    <input id="idade" class="idade" type="number" placeholder="Sua idade"><br><br>
+    
+    <label>Qual linguaguem de programação você deseja aprender?</label><br>
+    <input id="estudo" class="estudo" type="text" placeholder="Insira sua linguaguem de interesse" size="32"><br><br>
+    
+    
+    <button id="cadastrar" type="submit" onclick="enviar()">Cadastrar</button>
+</div>
+
+<div>
+    <h2 id="mensagem" class="mensagem"></h2>
+</div>
+
+<div id="informativo"></div><br>
+<div id="resposta-final"></div>
+
+
+<button id="next" type="submit" onclick="next()" disabled="true">Next</button>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-image: linear-gradient(45deg,rgb(54, 53, 53), gray);
+    height: 100%;
+    
+}
+
+
+header{
+    position: absolute;
+    top: 10px;
+    left: 30%;
+    padding: 5px;
+    line-height: 3.5;
+    text-align: center;
+    font-family: 'Red Hat Mono', monospace;
+    color: black;
+}
+
+
+.perguntas{
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.09);
+    border-radius: 11px;
+    box-shadow: 6px, 6px, 9px rgba(0, 0, 0, 0.7);
+    padding: 36px;
+    line-height: 1.6;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    color: whitesmoke;
+}
+
+
+input{
+    height: 25px;
+    text-indent: 2px;
+}
+
+
+button{
+   width: 90%;
+   height: 28px;
+   border: none;
+   border-radius: 15px;
+   font-size: 15px;
+   background-color: #d8a64b;
+}
+
+button:hover{
+    font-size: 15px;
+   background-color: #ec8f61;
+   cursor: pointer;
+}
+
+
+.mensagem{
+    font-family: 'Red Hat Mono', monospace;
+    font-size: 17.5px;
+    text-align: center;
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+
+
+#informativo{
+    position: absolute;
+    bottom: 18%;
+    left: 55px;
+    width: 90%;
+    align-items: center;
+    padding: 40px;
+    line-height: 1.7;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    color: whitesmoke;
+    
+}
+
+
+#resposta-final{
+    font-family: 'Red Hat Mono', monospace;
+    font-size: 12px;
+    color: whitesmoke;
+    text-align: center;
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+
+
+#next{
+    width: 45px;
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+footer {
+    margin-bottom: 10px;
+    position: absolute;
+    left: 17px;
+    bottom: 12px;
+}
+
+strong {
+    background-color: #adaaa6;
+    color: #000814;
+    padding: 0 7px;
+}
+
+</style>
+
+    <footer>
+        <h3 id="footer-info">Coded by <strong><a href="https://www.instagram.com/mryeagger/" style="text-decoration: none; color: darkblue;" target="_blank">Mr Yeagger</a></strong></h3>
+    </footer>
+</body>
+</html>
